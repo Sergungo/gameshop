@@ -28,7 +28,7 @@ public class GameController extends HttpServlet {
 
 	private static final String PARAMETER_ENTITY_ID = "id";
 	private static final String PARAMETER_ENTITY_NAME = "name";
-	private static final String PARAMETER_ENTITY_AUTHOR = "author";
+	private static final String PARAMETER_ENTITY_GAMEDEV = "gamedev";
 	private static final String PARAMETER_ENTITY_DATE = "date";
 
 	private GameDAO dao;
@@ -89,7 +89,7 @@ public class GameController extends HttpServlet {
 	private Game parse(HttpServletRequest request) {
 		Game item = new Game();
 		item.setName(request.getParameter(PARAMETER_ENTITY_NAME));
-		item.setGamedev(request.getParameter(PARAMETER_ENTITY_AUTHOR));
+		item.setGamedev(request.getParameter(PARAMETER_ENTITY_GAMEDEV));
 
 		Date date = DateTimeHelper.getSimpleDate(request.getParameter(PARAMETER_ENTITY_DATE));
 		if (date != null)

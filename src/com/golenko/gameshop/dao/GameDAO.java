@@ -150,6 +150,7 @@ public class GameDAO {
 
 	private void close(Connection connection) {
 		try {
+			if (connection != null)
 			connection.close();
 		} catch (SQLException ex) {
 			ex.printStackTrace();

@@ -9,9 +9,9 @@ import java.util.Properties;
 
 public class MySqlConnection {
 	private static Connection CONNECTION;
-	private static String URL;
-	private static String USERNAME;
-	private static String PASSWORD;
+	private static String URL = "jdbc:mysql://localhost/gameshop";
+	private static String USERNAME = "root";
+	private static String PASSWORD = "";
 
 	static {
 		try {
@@ -20,19 +20,19 @@ public class MySqlConnection {
 			System.out.println(e.getMessage());
 		}
 
-		Properties prop = new Properties();
-		FileInputStream in = null;
-		try {
-			in = new FileInputStream("database.properties");
-
-			prop.load(in);
-			in.close();
-		} catch (IOException e) {
-			System.out.println("Culdn't download " + "database properties.");
-		}
-		URL = prop.getProperty("jdbc.url");
-		USERNAME = prop.getProperty("jdbc.username");
-		PASSWORD = prop.getProperty("jdbc.password");
+//		Properties prop = new Properties();
+//		FileInputStream in = null;
+//		try {
+//			in = new FileInputStream("database.properties");
+//
+//			prop.load(in);
+//			in.close();
+//		} catch (IOException e) {
+//			System.out.println("Culdn't download " + "database properties.");
+//		}
+//		URL = prop.getProperty("jdbc.url");
+//		USERNAME = prop.getProperty("jdbc.username");
+//		PASSWORD = prop.getProperty("jdbc.password");
 	}
 
 	private MySqlConnection() {
@@ -42,8 +42,7 @@ public class MySqlConnection {
 	public static Connection getConnection() {
 		try {
 			if (CONNECTION == null || CONNECTION.isClosed()) {
-				CONNECTION = DriverManager.getConnection(URL, USERNAME,
-						PASSWORD);
+				CONNECTION = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
