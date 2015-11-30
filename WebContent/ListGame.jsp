@@ -36,7 +36,7 @@
 		</tbody>
 	</table>
 	<p>
-		<a href="BookController?action=insert">Add</a>
+		<a href="GameController?action=insert">Add</a>
 	</p>
 </body>
 </html>

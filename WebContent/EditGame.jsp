@@ -29,7 +29,7 @@
             value="<c:out value="${item.id}" />" />  
 		Name : <input
 			type="text" name="name" value="<c:out value="${item.name}" />" /><br /> 
-		Author : <input type="text" name="gamedev"
+		Game Developer : <input type="text" name="gamedev"
 			value="<c:out value="${item.gamedev}" />" /> <br /> 
 		Date : <input type="text" name="date" id="datepicker"
 			value="<fmt:formatDate pattern="dd/MM/yyyy" value="${item.date}" />" />
