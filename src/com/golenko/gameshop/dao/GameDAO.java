@@ -123,6 +123,7 @@ public class GameDAO {
 	 *            - the game will be inserted
 	 * @return true if successfully inserted
 	 */
+	
 	public boolean insert(Game item) {
 		return insert(item.getName(), item.getGamedev(), item.getDate());
 	}
