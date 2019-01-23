@@ -15,9 +15,11 @@ public class MySqlConnection {
 
 	static {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+//			System.out.println("class found");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
+			System.out.println("class not found");
 		}
 
 //		Properties prop = new Properties();
@@ -28,7 +30,7 @@ public class MySqlConnection {
 //			prop.load(in);
 //			in.close();
 //		} catch (IOException e) {
-//			System.out.println("Culdn't download " + "database properties.");
+//			System.out.println("Couldn't download " + "database properties.");
 //		}
 //		URL = prop.getProperty("jdbc.url");
 //		USERNAME = prop.getProperty("jdbc.username");
