@@ -12,7 +12,7 @@ import java.util.List;
 import com.golenko.gameshop.dao.MySqlConnection;
 import com.golenko.gameshop.model.Game;
 import com.golenko.gameshop.dao.GameDAO;
-import com.golenko.gameshop.model.Game;
+
 
 public class GameDAO {
 
@@ -117,7 +117,7 @@ public class GameDAO {
 	}
 
 	/**
-	 * Method insert onject into database
+	 * Method insert inject into database
 	 * 
 	 * @param item
 	 *            - the game will be inserted

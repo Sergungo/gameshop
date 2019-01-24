@@ -1,25 +1,25 @@
 package com.golenko.gameshop.dao;
 
-import java.io.FileInputStream;
-import java.io.IOException;
+//import java.io.FileInputStream;
+//import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.Properties;
+//import java.sql.SQLException;
+//import java.util.Properties;
 
 public class MySqlConnection {
 	private static Connection CONNECTION;
-	private static String URL = "jdbc:mysql://localhost/gameshop";
+	private static String URL = "jdbc:mysql://localhost:8080/gameshop";
 	private static String USERNAME = "root";
 	private static String PASSWORD = "";
 
 	static {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-//			System.out.println("class found");
+
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
-			System.out.println("class not found");
+			
 		}
 
 //		Properties prop = new Properties();
