@@ -9,9 +9,11 @@ import java.sql.DriverManager;
 
 public class MySqlConnection {
 	private static Connection CONNECTION;
-	private static String URL = "jdbc:mysql://localhost:3306/gameshop";
+	private static String URL = "jdbc:mysql://localhost:3306/gameshop?useLegacyDatetimeCode=false&serverTimezone=UTC";
+//	private static String USERNAME = "root";
+//	private static String PASSWORD = "";
 	private static String USERNAME = "root";
-	private static String PASSWORD = "";
+	private static String PASSWORD = "usbw";
 
 	static {
 		try {
