@@ -9,13 +9,13 @@ import java.sql.DriverManager;
 
 public class MySqlConnection {
 	private static Connection CONNECTION;
-	private static String URL = "jdbc:mysql://localhost:8080/gameshop";
+	private static String URL = "jdbc:mysql://localhost/gameshop";
 	private static String USERNAME = "root";
 	private static String PASSWORD = "";
 
 	static {
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+			Class.forName("com.mysql.cj.jdbc.Driver");
 
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
