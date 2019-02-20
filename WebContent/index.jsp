@@ -6,6 +6,6 @@
 <title>Game shop</title>
 </head>
 <body>
-<jsp:forward page="/GameController?action=list" />
+<jsp:forward page="_menu.jsp" />
 </body>
 </html>

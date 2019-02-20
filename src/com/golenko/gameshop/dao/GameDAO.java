@@ -16,7 +16,7 @@ import com.golenko.gameshop.dao.GameDAO;
 
 public class GameDAO {
 
-	private static String SQL_INSERT = "INSERT INTO games (name, gamedev, date) VALUE (?, ?, ?); ";
+	private static String SQL_INSERT = "INSERT INTO games (name, gamedev, date) VALUE (?, ?, ?);";
 	private static String SQL_UPDATE = "UPDATE games set name=?, gamedev=?, date=? where id=?";
 	private static String SQL_SELECT = "SELECT * FROM games;";
 	private static String SQL_DELETE = "delete from games;";
